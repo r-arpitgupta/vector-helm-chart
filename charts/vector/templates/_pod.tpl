@@ -13,6 +13,9 @@ priorityClassName: {{ . }}
 {{- with .Values.dnsPolicy }}
 dnsPolicy: {{ . }}
 {{- end }}
+{{- with .Values.hostNetwork }}
+hostNetwork: {{ . }}
+{{- end }}
 {{- with .Values.dnsConfig }}
 dnsConfig:
 {{ toYaml . | indent 2 }}
